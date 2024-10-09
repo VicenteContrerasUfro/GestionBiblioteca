@@ -7,7 +7,7 @@ public class Main {
         Biblioteca biblioteca = new Biblioteca("Biblioteca Central");
 
         Libro libro1 = new Libro ("Cien Años de Soledad", "Gabriel García Márquez", "Realismo Mágico", "ISBN001", 3);
-        Libro libro2 = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", "Novela", "ISBN002", 2);
+        Libro libro2 = new Libro ("Don Quijote de la Mancha", "Miguel de Cervantes", "Novela", "ISBN002", 2);
         Libro libro3 = new Libro("La Sombra del Viento", "Carlos Ruiz Zafón", "Misterio", "ISBN003", 1);
         Libro libro4 = new Libro("El Amor en los Tiempos del Cólera", "Gabriel García Márquez", "Novela", "ISBN004", 2);
 
@@ -15,9 +15,6 @@ public class Main {
         biblioteca.agregarLibro(libro2);
         biblioteca.agregarLibro(libro3);
         biblioteca.agregarLibro(libro4);
-
-        Libro libroDuplicado = new Libro("Cien Años de Soledad", "Gabriel García Márquez", "Realismo Mágico", "ISBN001", 2);
-        biblioteca.agregarLibro(libroDuplicado);
 
         // 3. Mostrar la lista de libros disponibles
         System.out.println("\n--- Lista de Libros Disponibles ---");
@@ -59,15 +56,7 @@ public class Main {
 
         // 8. Eliminar un libro de la biblioteca y mostrar la lista actualizada de libros
         System.out.println("\n--- Eliminando 'La Sombra del Viento' ---");
-        biblioteca.eliminarLibro("La Sombra del Viento"); // Solo se eliminará si cantidadDisponible es 1
-
-        System.out.println("\n--- Lista de Todos los Libros Después de la Eliminación ---");
-        biblioteca.mostrarTodosLosLibros();
-
-        // Intentar eliminar 'La Sombra del Viento' nuevamente después de devolverlo
-        System.out.println("\n--- Intentando Eliminar 'La Sombra del Viento' Después de Devolverlo ---");
-        biblioteca.devolverLibro("La Sombra del Viento"); // Aumenta cantidadDisponible a 2
-        biblioteca.eliminarLibro("La Sombra del Viento"); // Ahora debería poder eliminar si cantidadDisponible es 0
+        biblioteca.eliminarLibro("La Sombra del Viento");
 
         // Mostrar la lista final de libros
         System.out.println("\n--- Lista Final de Libros en la Biblioteca ---");

@@ -91,6 +91,7 @@ public class Libro {
                 System.out.println("ISBN: " + ISBN);
                 System.out.println("Cantidad disponible: " + cantidadDisponible);
                 System.out.println("Disponible: " + disponible);
+                System.out.println(" ------- ");
             }
         }
 
